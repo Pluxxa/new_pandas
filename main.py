@@ -21,6 +21,9 @@ try:
     for i in data_dict:
         print(f'Средняя зарплата в городе {i} - {sum(data_dict[i])/len(data_dict[i])}')
 
+    salary_by_city = df.groupby('City')['Salary'].mean()
+    print(salary_by_city)
+
 except:
     print(0)
 
